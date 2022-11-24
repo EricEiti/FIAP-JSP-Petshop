@@ -19,4 +19,10 @@ public class AnimalDAO {
 		return new ArrayList<>(animais.values());
 	}
 	
+	public static void cadastrar(Animal animal) {
+		System.out.println("Iniciando novo cadastro...");
+		animais.put(animal.getId(), animal);
+		System.out.println("Cadastro finalizado!");
+	}
+	
 }

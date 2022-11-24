@@ -10,7 +10,7 @@
 <title>Petshop da FIAP</title>
 </head>
 <body>
-	<a href="animal-novo">+ Animal</a>
+	<a href="animal-novo">+  + Animal</a>
 	<table>
 		<thead>
 			<tr>
