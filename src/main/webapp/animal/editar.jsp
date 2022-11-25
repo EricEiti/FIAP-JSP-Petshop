@@ -10,6 +10,7 @@
 	<h1>Editar Animal</h1>
 	<form method="POST" action="animal-editar"></br>
 		<label>ID:</label>${animal.id}</br>
+		<input name="idAnimal" type="hidden" value="${animal.id}"></br>
 		<label>Nome:</label>
 		<input name="nomeAnimal" type="text" value="${animal.nome}"></br>
 		<label>Especie:</label>

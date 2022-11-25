@@ -29,4 +29,15 @@ public class AnimalDAO {
 		return animais.get(id);
 	}
 	
+	public static void editar(Animal animal) {
+		System.out.println("Iniciando edicao de cadastro...");
+		animais.put(animal.getId(), animal);
+		System.out.println("Edicao finalizado!");
+	}
+	
+	public static void remover(long id) {
+		System.out.println("Iniciando remocao de cadastro...");
+		animais.remove(id);
+		System.out.println("Remocao finalizada!");
+	}
 }

@@ -30,10 +30,6 @@ public class AnimalNovoServlet extends HttpServlet {
 		
 		AnimalDAO.cadastrar(animal);
 		
-		request.setAttribute("animais", AnimalDAO.listar());
-		
-		//request.getRequestDispatcher("animal/index.jsp").forward(request, response);
-		
 		response.sendRedirect(request.getContextPath() + "/animal-listar");
 	}
 

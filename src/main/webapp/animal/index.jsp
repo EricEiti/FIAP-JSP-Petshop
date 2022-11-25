@@ -28,7 +28,9 @@
 				<td>${animal.nome}</td>
 				<td>${animal.especie}</td>
 				<td>${animal.cor}</td>
-				<td><a href="animal-editar?id=${animal.id}">Editar</a></td>
+				<td>
+					<a href="animal-editar?id=${animal.id}">Editar</a>
+					<a href="animal-remover?id=${animal.id}">Remover</a></td>
 			</tr>
 			</c:forEach>
 		</tbody>
