@@ -17,7 +17,7 @@ public class AnimalNovoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("animal/novo.jsp").forward(request, response);
+		request.getRequestDispatcher("/animal/novo.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -32,7 +32,9 @@ public class AnimalNovoServlet extends HttpServlet {
 		
 		request.setAttribute("animais", AnimalDAO.listar());
 		
-		request.getRequestDispatcher("animal/index.jsp").forward(request, response);
+		//request.getRequestDispatcher("animal/index.jsp").forward(request, response);
+		
+		response.sendRedirect(request.getContextPath() + "/animal-listar");
 	}
 
 }

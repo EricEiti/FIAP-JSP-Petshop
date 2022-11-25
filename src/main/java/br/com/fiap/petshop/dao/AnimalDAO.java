@@ -25,4 +25,8 @@ public class AnimalDAO {
 		System.out.println("Cadastro finalizado!");
 	}
 	
+	public static Animal buscar(long id) {
+		return animais.get(id);
+	}
+	
 }

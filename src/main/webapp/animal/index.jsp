@@ -10,7 +10,7 @@
 <title>Petshop da FIAP</title>
 </head>
 <body>
-	<a href="animal-novo">+  + Animal</a>
+	<a href="animal-novo">+ Animal</a>
 	<table>
 		<thead>
 			<tr>
@@ -18,6 +18,7 @@
 				<td>Nome</td>
 				<td>Espécie</td>
 				<td>Cor</td>
+				<td>Acao</td>
 			</tr>
 		</thead>
 		<tbody>
@@ -27,6 +28,7 @@
 				<td>${animal.nome}</td>
 				<td>${animal.especie}</td>
 				<td>${animal.cor}</td>
+				<td><a href="animal-editar?id=${animal.id}">Editar</a></td>
 			</tr>
 			</c:forEach>
 		</tbody>
