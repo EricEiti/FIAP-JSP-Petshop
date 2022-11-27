@@ -10,6 +10,10 @@
 <title>Petshop da FIAP</title>
 </head>
 <body>
+	<c:if test="${not empty nomeUsuario}">
+			Bem-Vindo, ${nomeUsuario}!
+	</c:if>
+	<h2></h2>
 	<a href="animal-novo">+ Animal</a>
 	<table>
 		<thead>
