@@ -11,7 +11,7 @@
 </head>
 <body>
 	<c:if test="${not empty nomeUsuario}">
-			Bem-Vindo, ${nomeUsuario}!
+			Bem-Vindo, ${nomeUsuario}! <a href="logout">Logout</a>
 	</c:if>
 	<h2></h2>
 	<a href="animal-novo">+ Animal</a>
