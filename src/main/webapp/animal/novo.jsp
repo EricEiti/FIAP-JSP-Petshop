@@ -8,15 +8,15 @@
 </head>
 <body>
 	<h1>Novo Animal</h1>
-	<form method="POST" action="animal-novo"></br>
+	<form method="POST" action="animal-novo"><br>
 		<label>ID:</label>
-		<input name="idAnimal" type="text"></br>
+		<input name="idAnimal" type="text"><br>
 		<label>Nome:</label>
-		<input name="nomeAnimal" type="text"></br>
+		<input name="nomeAnimal" type="text"><br>
 		<label>Especie:</label>
-		<input name="especieAnimal" type="text"></br>
+		<input name="especieAnimal" type="text"><br>
 		<label>Cor:</label>
-		<input name="corAnimal" type="text"></br>
+		<input name="corAnimal" type="text"><br>
 		<input type="submit" value="Cadastrar">
 	</form>
 </body>

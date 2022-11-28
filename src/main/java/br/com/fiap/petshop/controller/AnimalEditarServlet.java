@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import br.com.fiap.petshop.dao.AnimalDAO;
 import br.com.fiap.petshop.model.Animal;
@@ -19,13 +20,23 @@ public class AnimalEditarServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		long idAnimal = Long.valueOf(request.getParameter("id"));
 
-		Animal animal = AnimalDAO.buscar(idAnimal);
+		HttpSession session = request.getSession();
 
-		request.setAttribute("animal", animal);
+		String nomeUsuario = (String) session.getAttribute("nomeUsuario");
 
-		request.getRequestDispatcher("animal/editar.jsp").forward(request, response);
+		if (nomeUsuario != null) {
+			long idAnimal = Long.valueOf(request.getParameter("id"));
+
+			Animal animal = AnimalDAO.buscar(idAnimal);
+
+			request.setAttribute("animal", animal);
+
+			request.getRequestDispatcher("animal/editar.jsp").forward(request, response);
+
+		} else {
+			response.sendRedirect(request.getContextPath() + "/login");
+		}
 	}
 
 	@Override

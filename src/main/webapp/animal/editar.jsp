@@ -8,15 +8,15 @@
 </head>
 <body>
 	<h1>Editar Animal</h1>
-	<form method="POST" action="animal-editar"></br>
-		<label>ID:</label>${animal.id}</br>
-		<input name="idAnimal" type="hidden" value="${animal.id}"></br>
+	<form method="POST" action="animal-editar"><br>
+		<label>ID:</label>${animal.id}<br>
+		<input name="idAnimal" type="hidden" value="${animal.id}"><br>
 		<label>Nome:</label>
-		<input name="nomeAnimal" type="text" value="${animal.nome}"></br>
+		<input name="nomeAnimal" type="text" value="${animal.nome}"><br>
 		<label>Especie:</label>
-		<input name="especieAnimal" type="text" value="${animal.especie}"></br>
+		<input name="especieAnimal" type="text" value="${animal.especie}"><br>
 		<label>Cor:</label>
-		<input name="corAnimal" type="text" value="${animal.cor}"></br>
+		<input name="corAnimal" type="text" value="${animal.cor}"><br>
 		<input type="submit" value="Editar">
 	</form>
 </body>

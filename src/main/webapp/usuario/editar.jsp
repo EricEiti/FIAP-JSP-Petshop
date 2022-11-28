@@ -8,10 +8,10 @@
 </head>
 <body>
 	<form method="POST" action="usuario-editar">
-		<label>login: </label>${login}</br>
+		<label>login: </label>${login}<br>
 		<input name="login" type="hidden" value="${login}">
 		<label>Nome:</label>
-		<input name="nomeCompleto" type="text" value="${nomeCompleto}"></br>
+		<input name="nomeCompleto" type="text" value="${nomeCompleto}"><br>
 		<input type="submit" value="Editar">
 	</form>
 </body>

@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import br.com.fiap.petshop.dao.UsuarioDAO;
-import br.com.fiap.petshop.model.Usuario;
 
 @WebServlet("/usuario-editar")
 public class UsuarioEditarServlet extends HttpServlet {
