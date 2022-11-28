@@ -25,5 +25,13 @@ public class UsuarioDAO {
 		System.out.println("Login não foi efetuado com sucesso.");
 		return null;
 	}
+	
+	public static void alterar(String login, String nomeCompleto) {
+		for (Usuario usuario : usuarios) {
+			if (usuario.getLogin().equals(login)) {
+				
+			}
+		}
+	}
 
 }

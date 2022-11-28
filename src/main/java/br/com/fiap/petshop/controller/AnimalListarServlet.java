@@ -24,13 +24,16 @@ public class AnimalListarServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 
 		String nomeUsuario = (String) session.getAttribute("nomeUsuario");
+		String login = (String) session.getAttribute("login");
+		
+		@SuppressWarnings("unchecked")
 		List<String> permissoes = (List<String>) session.getAttribute("permissoes");
 
 		if (nomeUsuario != null) {
 			if (!permissoes.contains("listar")) {
 				request.getRequestDispatcher("/login/acesso-negado.jsp").forward(request, response);
 			} else {
-				List<Animal> listaAnimais = AnimalDAO.listar();
+				List<Animal> listaAnimais = AnimalDAO.listar(login);
 
 				request.setAttribute("animais", listaAnimais);
 

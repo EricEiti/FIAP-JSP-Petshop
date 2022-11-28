@@ -37,8 +37,10 @@ public class LoginServlet extends HttpServlet {
 						
 		} else {
 			HttpSession session = request.getSession();
+			session.setMaxInactiveInterval(300);
 			session.setAttribute("nomeUsuario", usuario.getNomeCompleto());
 			session.setAttribute("permissoes", usuario.getPermissoes());
+			session.setAttribute("login", usuario.getLogin());
 			
 			response.sendRedirect(request.getContextPath() + "/animal-listar");
 		}

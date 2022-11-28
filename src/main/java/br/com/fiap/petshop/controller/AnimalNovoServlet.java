@@ -25,8 +25,9 @@ public class AnimalNovoServlet extends HttpServlet {
 		String nomeAnimal = request.getParameter("nomeAnimal");
 		String especieAnimal = request.getParameter("especieAnimal");
 		String corAnimal = request.getParameter("corAnimal");
+		String donoAnimal = request.getParameter("donoAnimal");
 		
-		Animal animal = new Animal(idAnimal, nomeAnimal, especieAnimal, corAnimal);
+		Animal animal = new Animal(idAnimal, nomeAnimal, especieAnimal, corAnimal, donoAnimal);
 		
 		AnimalDAO.cadastrar(animal);
 		

@@ -6,13 +6,15 @@ public class Animal {
 	private String nome;
 	private String especie;
 	private String cor;
+	private String dono;
 
-	public Animal(long id, String nome, String especie, String cor) {
+	public Animal(long id, String nome, String especie, String cor, String dono) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.especie = especie;
 		this.cor = cor;
+		this.dono = dono;
 	}
 
 	public long getId() {
@@ -46,4 +48,13 @@ public class Animal {
 	public void setCor(String cor) {
 		this.cor = cor;
 	}
+
+	public String getDono() {
+		return dono;
+	}
+
+	public void setDono(String dono) {
+		this.dono = dono;
+	}
+
 }
